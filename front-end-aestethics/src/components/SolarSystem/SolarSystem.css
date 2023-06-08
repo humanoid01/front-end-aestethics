@@ -1,8 +1,10 @@
 .solar-system {
   height: 100vmin;
-  background-image: url('../../assets/SolarSystem/galaxy.jpg');
+  background: url('../../assets/SolarSystem/galaxy.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
+  overflow: hidden;
 }
 
 .celestial {
@@ -15,7 +17,7 @@
   bottom: 0;
 }
 .planet {
-  z-index: 1;
+  z-index: 999;
 }
 
 #sun {
@@ -54,4 +56,22 @@
 #neptune {
   height: 5vmin;
   width: 5vmin;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes unorbit {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
