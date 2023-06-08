@@ -1,0 +1,54 @@
+.solar-system {
+  height: 100vmin;
+  background-image: url('../../assets/SolarSystem/galaxy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.celestial {
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#sun {
+  height: 16vmin;
+  width: 16vmin;
+}
+#mercury {
+  height: 2vmin;
+  width: 2vmin;
+}
+#venus {
+  height: 3vmin;
+  width: 3vmin;
+}
+#earth {
+  height: 4vmin;
+  width: 4vmin;
+}
+#mars {
+  height: 3.5vmin;
+  width: 3.5vmin;
+}
+#jupiter {
+  height: 8vmin;
+  width: 8vmin;
+}
+#saturn {
+  height: 6vmin;
+  width: 12vmin;
+  border-radius: 0%;
+}
+#uranus {
+  height: 6vmin;
+  width: 6vmin;
+}
+#neptune {
+  height: 5vmin;
+  width: 5vmin;
+}

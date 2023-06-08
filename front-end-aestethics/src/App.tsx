@@ -1,5 +1,11 @@
+import { SolarSystem } from './components/SolarSystem/SolarSystem';
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <SolarSystem />
+    </>
+  );
 }
 
 export default App;
