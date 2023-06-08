@@ -1,5 +1,5 @@
 .solar-system {
-  height: 100vmin;
+  height: 200vmin;
   background-image: url('../../assets/SolarSystem/galaxy.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,8 +16,8 @@
 }
 
 #sun {
-  height: 16vmin;
-  width: 16vmin;
+  height: 10vmin;
+  width: 10vmin;
 }
 #mercury {
   height: 2vmin;
