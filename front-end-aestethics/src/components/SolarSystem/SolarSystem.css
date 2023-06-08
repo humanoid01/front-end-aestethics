@@ -1,8 +1,8 @@
 .solar-system {
-  height: 200vmin;
+  height: 100vmin;
   background-image: url('../../assets/SolarSystem/galaxy.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
 }
 
 .celestial {
@@ -13,6 +13,9 @@
   left: 0;
   right: 0;
   bottom: 0;
+}
+.planet {
+  z-index: 1;
 }
 
 #sun {
