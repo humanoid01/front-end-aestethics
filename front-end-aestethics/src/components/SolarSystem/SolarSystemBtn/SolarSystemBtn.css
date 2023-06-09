@@ -1,0 +1,39 @@
+:root {
+  --transition: 0.25s;
+  --spark: 1.8s;
+  --hue: 245;
+}
+
+button {
+  --active: 0;
+  background-color: hsl(var(--hue) 100% calc(4% * var(--active) + 2%));
+  background-image: radial-gradient(
+      100% 100% at calc(200% - var(--active) * 100%)
+        calc(200% - var(--active) * 100%),
+      white 15%,
+      transparent 30%
+    ),
+    radial-gradient(140% 140% at 135% 135%, #5954e3 45%, transparent 70%);
+  background-position: calc(100px - var(--active) * 100px);
+  background-repeat: no-repeat;
+
+  scale: calc(1 + (var(--active) * 0.1));
+  box-shadow: 0 0 calc(var(--active) * 6rem) calc(3rem * var(--active))
+    hsl(var(--hue) 100% 30% / 0.5);
+
+  font-size: 2rem;
+  font-weight: 500;
+  border: 0;
+  cursor: pointer;
+  padding: 0.9em 1.3em;
+  display: flex;
+  align-items: center;
+  border-radius: 2rem;
+
+  transition: box-shadow var(--transition), scale var(--transition),
+    background var(--transition);
+}
+
+button:is(:hover) {
+  --active: 1;
+}

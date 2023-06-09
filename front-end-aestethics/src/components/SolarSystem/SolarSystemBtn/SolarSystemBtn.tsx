@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './SolarSystemBtn.css';
 interface SolarSystemBtnProps {
   options: [string, number][];
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
@@ -22,8 +23,11 @@ export const SolarSystemBtn = ({ options, onClick }: SolarSystemBtnProps) => {
   const currentOptionLabel = options[option][0];
 
   return (
-    <div onClick={handleClick} style={{ color: 'red' }}>
-      {currentOptionLabel}
+    <div className='galaxy-button' onClick={handleClick}>
+      <button>
+        <div style={{ color: 'white' }}>{currentOptionLabel}</div>
+      </button>
+      <div className='bodydrop'></div>
     </div>
   );
 };
