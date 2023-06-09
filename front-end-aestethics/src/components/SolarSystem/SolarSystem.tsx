@@ -8,6 +8,7 @@ import jupiter from '../../assets/SolarSystem/jupiter.png';
 import saturn from '../../assets/SolarSystem/saturn.png';
 import uranus from '../../assets/SolarSystem/uranus.png';
 import neptune from '../../assets/SolarSystem/neptune.png';
+import { SolarSystemBtn } from './SolarSystemBtn/SolarSystemBtn';
 interface Planet {
   img: string;
   name: string;
@@ -144,6 +145,7 @@ export const SolarSystem = () => {
           />
         );
       })}
+      <SolarSystemBtn options={['1day/1s', '1year/1s', '100years/1s']} />
     </div>
   );
 };
