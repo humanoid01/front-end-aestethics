@@ -25,9 +25,10 @@ export const SolarSystemBtn = ({ options, onClick }: SolarSystemBtnProps) => {
   return (
     <div className='galaxy-button' onClick={handleClick}>
       <button>
-        <div style={{ color: 'white' }}>{currentOptionLabel}</div>
+        <span className='spark'></span>
+        <span className='backdrop'></span>
+        <div style={{ color: 'white', zIndex: 1 }}>{currentOptionLabel}</div>
       </button>
-      <div className='bodydrop'></div>
     </div>
   );
 };
