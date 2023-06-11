@@ -148,6 +148,26 @@ export const SolarSystem = () => {
         );
       })}
       <SolarSystemBtn options={options} onClick={() => handleOption()} />
+
+      <div className='text-box-container'>
+        <div className='text-box'>
+          <br />
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+          <p>asdasdasd</p>
+        </div>
+      </div>
     </div>
   );
 };

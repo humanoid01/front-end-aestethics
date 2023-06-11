@@ -1,5 +1,6 @@
 .solar-system {
-  height: 100vmin;
+  height: 100vh;
+  width: 100vw;
   background: url('../../assets/SolarSystem/galaxy.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -74,4 +75,58 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+.text-box {
+  position: absolute;
+  width: 330px;
+  height: 500px;
+  border: 1px solid #000;
+  overflow: hidden;
+  background-color: red;
+  position: relative;
+  overflow: hidden;
+  background: #0e374b;
+  clip-path: polygon(
+    0 3%,
+    86% 3%,
+    95% 12%,
+    95% 95%,
+    45% 95%,
+    22% 80%,
+    5% 80%,
+    0 77%
+  );
+}
+
+.text-box-container {
+  position: absolute;
+  width: 330px;
+  height: 500px;
+  overflow: hidden;
+  background-color: red;
+  position: relative;
+  left: 5%;
+  overflow: hidden;
+  background: #3ccaf6;
+  opacity: 0.8;
+  clip-path: polygon(
+    0 3%,
+    5% 0,
+    30% 0,
+    35% 3%,
+    85% 3%,
+    95% 12%,
+    95% 45%,
+    100% 50%,
+    100% 80%,
+    95% 85%,
+    95% 95%,
+    45% 95%,
+    25% 82%,
+    15% 82%,
+    10% 80%,
+    5% 80%,
+    0 77%
+  );
 }
