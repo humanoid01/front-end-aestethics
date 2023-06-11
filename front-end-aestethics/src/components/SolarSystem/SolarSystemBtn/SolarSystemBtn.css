@@ -1,23 +1,27 @@
 :root {
   --transition: 0.25s;
-  --spark: 1.8s;
+  --spark: 2s;
   --hue: 245;
+  --active: 0;
 }
 
 button {
-  --active: 0;
-  background-color: hsl(var(--hue) 100% calc(4% * var(--active) + 2%));
-  background-image: radial-gradient(
-      100% 100% at calc(220% - var(--active) * 100%)
-        calc(220% - var(--active) * 100%),
-      white 35%,
-      transparent 60%
-    ),
-    radial-gradient(140% 140% at 135% 135%, #5954e3 45%, transparent 70%);
-  background-position: calc(100px - var(--active) * 100px);
-  background-repeat: no-repeat;
+  --bg: radial-gradient(
+        100% 100% at calc(220% - var(--active) * 100%)
+          calc(220% - var(--active) * 100%),
+        white 35%,
+        transparent 60%
+      )
+      calc(100px - var(--active) * 100px) no-repeat,
+    radial-gradient(140% 140% at 135% 135%, #5954e3 45%, transparent 70%)
+      calc(100px - var(--active) * 100px) no-repeat,
+    hsl(var(--hue) 100% calc(4% * var(--active) + 2%));
+
   box-shadow: 0 0 calc(var(--active) * 6rem) calc(3rem * var(--active))
-    hsl(var(--hue) 100% 30% / 0.5);
+      hsl(var(--hue) 100% 30% / 0.5),
+    0 0.1rem 0 0 gray inset;
+  background: var(--bg);
+  scale: calc(var(--active) * 0.1 + 1);
   position: relative;
   font-size: 2rem;
   font-weight: 500;
@@ -28,8 +32,7 @@ button {
   align-items: center;
   border-radius: 2rem;
   z-index: 999;
-  transition: box-shadow var(--transition), scale var(--transition),
-    background var(--transition);
+  transition: var(--transition);
 }
 
 button:is(:hover) {
@@ -38,16 +41,16 @@ button:is(:hover) {
 
 @keyframes rotate {
   from {
-    transform: rotate(-90deg);
+    transform: rotate(-55deg);
   }
   to {
-    transform: rotate(90deg);
+    transform: rotate(55deg);
   }
 }
 
 @keyframes flip {
   to {
-    rotate: 360deg;
+    transform: rotate(360deg);
   }
 }
 
@@ -77,17 +80,8 @@ button:is(:hover) {
 
 .backdrop {
   position: absolute;
-  background-color: hsl(var(--hue) 100% calc(4% * var(--active) + 2%));
-  background-image: radial-gradient(
-      100% 100% at calc(220% - var(--active) * 100%)
-        calc(220% - var(--active) * 100%),
-      white 35%,
-      transparent 60%
-    ),
-    radial-gradient(140% 140% at 135% 135%, #5954e3 45%, transparent 70%);
-  background-position: calc(100px - var(--active) * 100px);
-  background-repeat: no-repeat;
-  inset: 0.1rem;
+  background: var(--bg);
+  inset: 0.2rem;
   border-radius: 2rem;
   transition: var(--transition);
 }
