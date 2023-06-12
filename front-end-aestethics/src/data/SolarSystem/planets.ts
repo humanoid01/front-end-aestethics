@@ -6,7 +6,7 @@ import jupiter from '../../assets/SolarSystem/jupiter.png';
 import saturn from '../../assets/SolarSystem/saturn.png';
 import uranus from '../../assets/SolarSystem/uranus.png';
 import neptune from '../../assets/SolarSystem/neptune.png';
-interface Planet {
+export interface Planet {
   img: string;
   name: string;
   rad: number;
@@ -19,7 +19,7 @@ interface Planet {
   description: string;
 }
 
-interface Planets {
+export interface Planets {
   [key: string]: Planet;
 }
 export const planets: Planets = {
