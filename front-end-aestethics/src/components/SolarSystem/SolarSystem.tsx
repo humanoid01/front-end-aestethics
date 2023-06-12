@@ -89,7 +89,6 @@ export const SolarSystem = () => {
     ['5years/1s', 1825],
   ];
   const [option, setOption] = useState(0);
-
   const handleOption = () => {
     const length = options.length - 1;
     if (option === length) {
@@ -149,23 +148,14 @@ export const SolarSystem = () => {
       })}
       <SolarSystemBtn options={options} onClick={() => handleOption()} />
 
-      <div className='text-box-container'>
-        <div className='text-box'>
-          <br />
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
-          <p>asdasdasd</p>
+      <div className='dialog-wrapper'>
+        <div className='text-box-ref'>
+          <div className='text-box-container'>
+            <div className='text-box'></div>
+          </div>
+        </div>
+        <div className='text-box-title-container'>
+          <div className='text-box-title'></div>
         </div>
       </div>
     </div>

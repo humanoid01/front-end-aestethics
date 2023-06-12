@@ -85,13 +85,13 @@
   overflow: hidden;
   background-color: red;
   position: relative;
-  overflow: hidden;
   background: #0e374b;
   clip-path: polygon(
     0 3%,
     86% 3%,
     95% 12%,
-    95% 95%,
+    95% 90%,
+    87% 95%,
     45% 95%,
     22% 80%,
     5% 80%,
@@ -103,11 +103,10 @@
   position: absolute;
   width: 330px;
   height: 500px;
+  top: -100%;
   overflow: hidden;
   background-color: red;
   position: relative;
-  left: 5%;
-  overflow: hidden;
   background: #3ccaf6;
   opacity: 0.8;
   clip-path: polygon(
@@ -121,7 +120,8 @@
     100% 50%,
     100% 80%,
     95% 85%,
-    95% 95%,
+    95% 90%,
+    87% 95%,
     45% 95%,
     25% 82%,
     15% 82%,
@@ -129,4 +129,59 @@
     5% 80%,
     0 77%
   );
+}
+
+.text-box-title-container {
+  position: absolute;
+  left: 8%;
+  top: -18%;
+  width: 250px;
+  height: 50px;
+  clip-path: polygon(
+    0 0,
+    25% 0,
+    30% 15%,
+    100% 15%,
+    100% 55%,
+    90% 100%,
+    0% 100%
+  );
+  background: #3ccaf6;
+  opacity: 0.8;
+}
+
+.text-box-title {
+  clip-path: polygon(0 15%, 100% 15%, 100% 55%, 90% 100%, 0% 100%);
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  background: #0e374b;
+}
+
+.dialog-wrapper {
+  position: absolute;
+  left: 80%;
+  top: 30%;
+}
+
+.text-box-ref::after {
+  content: '';
+  position: absolute;
+  border-top: white 1px solid;
+  width: 25px;
+  height: 25px;
+  left: 2.7%;
+  top: -2.6%;
+  transform: rotate(45deg);
+}
+
+.text-box-ref::before {
+  content: '';
+  position: absolute;
+  border-top: white 1px solid;
+  width: 35px;
+  height: 35px;
+  left: -4.1%;
+  top: -10.6%;
+  transform: rotate(90deg);
 }
