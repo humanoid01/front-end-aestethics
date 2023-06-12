@@ -6,7 +6,11 @@
   --hue: 245;
   --active: 0;
 }
-
+.galaxy-button {
+  position: absolute;
+  top: 5%;
+  right: 15%;
+}
 button {
   font-family: 'VT323', monospace;
   font-size: 16px;
