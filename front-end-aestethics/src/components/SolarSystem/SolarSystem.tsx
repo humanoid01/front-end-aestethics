@@ -17,7 +17,7 @@ interface Planet {
   deg: number;
   velocity: number;
   kilometers: string;
-  lightyears: string;
+  au: string;
   mass: string;
   noEarthYears: string;
   description: string;
@@ -33,8 +33,8 @@ const planets: Planets = {
     rad: 11,
     deg: 0,
     velocity: 88,
-    kilometers: '57.9 million kilometers',
-    lightyears: '0.000006123',
+    kilometers: '57.9 m. kilometers',
+    au: '0.39',
     mass: '3.3 x 10^23',
     noEarthYears: '0.24',
     description:
@@ -46,8 +46,8 @@ const planets: Planets = {
     rad: 16,
     deg: 0,
     velocity: 255,
-    kilometers: '108.2 million kilometers',
-    lightyears: '0.0000115',
+    kilometers: '108.2 m. kilometers',
+    au: '0.72',
     mass: '4.87 x 10^24',
     noEarthYears: '0.62',
     description: `Venus, often referred to as Earth's "sister planet," is a rocky planet similar in size and composition. However, it stands out with its dense atmosphere, which is primarily composed of carbon dioxide, creating a runaway greenhouse effect. This leads to a scorching and inhospitable surface with temperatures hot enough to melt lead. Venus is known for its thick cloud cover, consisting of sulfuric acid clouds that obscure its surface from direct view. The planet's surface is dotted with numerous volcanoes and vast lava plains, indicating a history of intense geological activity.`,
@@ -58,8 +58,8 @@ const planets: Planets = {
     rad: 25,
     deg: 0,
     velocity: 365,
-    kilometers: '149.6 million kilometers',
-    lightyears: '0.0000159',
+    kilometers: '149.6 m. kilometers',
+    au: '1',
     mass: '5.97 x 10^24',
     noEarthYears: '1',
     description: `Earth, our home planet, is a diverse and vibrant world teeming with life. With a rich atmosphere and moderate temperatures, it supports a wide array of ecosystems and provides a nurturing environment for countless species. It has a dynamic surface, featuring vast oceans, towering mountains, sprawling forests, and expansive deserts. The presence of liquid water is a unique characteristic of Earth, making it the only known planet in the universe to harbor life. Earth's position in the solar system, within the habitable zone, ensures its optimal distance from the Sun for the existence of liquid water and the conditions necessary for life as we know it.`,
@@ -70,11 +70,11 @@ const planets: Planets = {
     rad: 35,
     deg: 0,
     velocity: 687,
-    kilometers: '227.9 million kilometers',
-    lightyears: '0.0000242',
+    kilometers: '227.9 m. kilometers',
+    au: '1.52',
     mass: '6.42 x 10^23',
     noEarthYears: '1.88',
-    description: `Mars, often called the "Red Planet," captivates with its rusty-hued appearance. It is a cold and arid world with a thin atmosphere composed mainly of carbon dioxide. Mars boasts the largest volcano in the solar system, Olympus Mons, and the longest canyon, Valles Marineris. Although its surface is marked by impact craters, Mars also exhibits signs of ancient riverbeds, indicating the presence of liquid water in the past. Scientists continue to search for traces of microbial life and investigate the possibility of future human exploration and colonization on Mars.`,
+    description: `Mars, often called the "Red Planet", captivates with its rusty-hued appearance. It is a cold and arid world with a thin atmosphere composed mainly of carbon dioxide. Mars boasts the largest volcano in the solar system, Olympus Mons, and the longest canyon, Valles Marineris. Although its surface is marked by impact craters, Mars also exhibits signs of ancient riverbeds, indicating the presence of liquid water in the past. Scientists continue to search for traces of microbial life and investigate the possibility of future human exploration and colonization on Mars.`,
   },
   jupiter: {
     img: jupiter,
@@ -82,8 +82,8 @@ const planets: Planets = {
     rad: 56,
     deg: 0,
     velocity: 4333,
-    kilometers: '778.6 million kilometers',
-    lightyears: '0.0000827',
+    kilometers: '778.6 m. kilometers',
+    au: '5.20',
     mass: ' 1.90 x 10^27',
     noEarthYears: '11.86',
     description: `Jupiter, the largest planet in our solar system, is a gas giant with a diameter over 11 times that of Earth. Its colossal mass exerts a gravitational pull strong enough to capture numerous moons, the most notable being the four Galilean moons: Io, Europa, Ganymede, and Callisto. Jupiter's atmosphere is predominantly composed of hydrogen and helium, giving it its characteristic striped appearance with swirling bands of clouds. The planet is home to the famous Great Red Spot, a massive storm system larger than Earth, which has been observed for centuries.`,
@@ -94,8 +94,8 @@ const planets: Planets = {
     rad: 69,
     deg: 0,
     velocity: 10759,
-    kilometers: '1.43 billion kilometers',
-    lightyears: '0.000152',
+    kilometers: '1.43 b. kilometers',
+    au: '9.58',
     mass: '5.68 x 10^26',
     noEarthYears: '29.46',
     description: `Saturn, known for its magnificent ring system, is the second-largest planet in our solar system. The rings, composed of countless icy particles ranging in size from tiny grains to enormous chunks, encircle the planet's equator. Beneath the rings, Saturn is a gas giant similar in composition to Jupiter, with hydrogen and helium dominating its atmosphere. Saturn possesses a complex system of over 80 moons, with Titan being the most intriguing, harboring lakes of liquid hydrocarbons on its surface. The planet's vibrant and intricate ring system has mesmerized astronomers and stargazers alike throughout history.`,
@@ -106,8 +106,8 @@ const planets: Planets = {
     rad: 83,
     deg: 0,
     velocity: 30687,
-    kilometers: '2.87 billion kilometers',
-    lightyears: '0.000306',
+    kilometers: '2.87 b. kilometers',
+    au: '19.18',
     mass: '8.68 x 10^25',
     noEarthYears: '84.01',
     description: `Uranus, the seventh planet from the Sun, stands out with its unique feature: it rotates on its side, nearly perpendicular to its orbital plane. This axial tilt leads to extreme seasonal variations and a distinct set of hemispheres. Uranus is an ice giant, primarily composed of hydrogen, helium, and methane, which gives it a blue-green hue. It possesses a system of faint rings and a collection of more than two dozen moons. Uranus's peculiar characteristics continue to intrigue scientists, who aim to uncover the mysteries of its internal structure and atmospheric dynamics.`,
@@ -118,8 +118,8 @@ const planets: Planets = {
     rad: 95,
     deg: 0,
     velocity: 60190,
-    kilometers: '4.50 billion kilometers',
-    lightyears: '0.000478',
+    kilometers: '4.50 b. kilometers',
+    au: '30.07',
     mass: '1.02 x 10^26',
     noEarthYears: '164.79',
     description: `Neptune, the farthest planet from the Sun in our solar system, is another ice giant. Its deep blue coloration is a result of methane in its atmosphere, which absorbs red light and reflects blue light. Neptune boasts strong winds, with the fastest recorded in the solar system, reaching speeds over 2,100 kilometers per hour. The planet has a dynamic atmosphere with cloud systems, including the iconic Great Dark Spot, a storm similar to Jupiter's Great Red Spot but later disappeared. Neptune has a diverse moon system, with Triton being its largest moon and exhibiting fascinating geysers erupting from its icy surface. The study of Neptune provides valuable insights into the outer reaches of our solar system.`,
@@ -151,55 +151,67 @@ export const SolarSystem = () => {
   const currentOptionValue = options[option][1];
   return (
     <div className='solar-system'>
-      <img className='celestial' src={sun} alt='sun' id='sun' />
-      {plantesArray.map(([_, planet]) => {
-        return (
-          <div
-            key={planet.name}
-            className='celestial rotate planet'
-            // new orbit solution
-            style={{
-              animation: `orbit linear ${
-                planet.velocity / currentOptionValue
-              }s infinite`,
-            }}>
-            <img
-              className='celestial'
-              src={planet.img}
-              alt={planet.name}
-              id={planet.name}
-              // new orbit solution
-              style={{
-                right: `${planet.rad}vmin`,
-                animation: `unorbit linear ${
-                  planet.velocity / currentOptionValue
-                }s infinite`,
-              }}
-            />
-          </div>
-        );
-      })}
-      {plantesArray.map(([_, planet]) => {
-        return (
-          <div
-            className='celestial'
-            style={{
-              border: 'solid white 1px',
-              opacity: 0.4,
-              background: 'transparent',
-              height: `${planet.rad}vmin`,
-              width: `${planet.rad}vmin`,
-              zIndex: 0,
-            }}
-          />
-        );
-      })}
-      <SolarSystemBtn options={options} onClick={() => handleOption()} />
-      <div className='planet-names'>
+      <div className='solar-system-container'>
+        {' '}
+        <img className='celestial' src={sun} alt='sun' id='sun' />
         {plantesArray.map(([_, planet]) => {
           return (
-            <div>
+            <div
+              key={planet.name}
+              className='celestial rotate planet'
+              // new orbit solution
+              style={{
+                animation: `orbit linear ${
+                  planet.velocity / currentOptionValue
+                }s infinite`,
+              }}>
+              <img
+                className='celestial'
+                src={planet.img}
+                alt={planet.name}
+                id={planet.name}
+                // new orbit solution
+                style={{
+                  right: `${planet.rad}vmin`,
+                  animation: `unorbit linear ${
+                    planet.velocity / currentOptionValue
+                  }s infinite`,
+                }}
+              />
+            </div>
+          );
+        })}
+        {plantesArray.map(([_, planet]) => {
+          return (
+            <div
+              key={planet.name}
+              className='celestial'
+              style={{
+                border: 'solid white 1px',
+                opacity: 0.4,
+                background: 'transparent',
+                height: `${planet.rad}vmin`,
+                width: `${planet.rad}vmin`,
+                zIndex: 0,
+              }}
+            />
+          );
+        })}
+      </div>
+
+      <div className='planet-names'>
+        <SolarSystemBtn options={options} onClick={() => handleOption()} />
+
+        {plantesArray.map(([_, planet]) => {
+          return (
+            <div key={planet.name}>
               <div
+                className='dialog-text'
+                style={{
+                  textTransform: 'capitalize',
+                  marginTop: '20px',
+                  fontSize: '30px',
+                }}
                 onClick={() => {
                   if (planet.name === displayCurrentPlanet)
                     return setDisplayCurrentPlanet(null);
@@ -207,17 +219,59 @@ export const SolarSystem = () => {
                 }}>
                 {planet.name}
               </div>
+
               {displayCurrentPlanet === planet.name ? (
-                <div className='dialog-wrapper'>
+                <div className='dialog-wrapper  dialog-text'>
                   <div className='text-box-title-container'>
                     <div className='text-box-title'>
-                      <p>{planet.name}</p>
+                      <p
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'center',
+                          textTransform: 'capitalize',
+                          width: '100%',
+                          fontSize: '40px',
+                        }}>
+                        {planet.name}
+                      </p>
                     </div>
                   </div>
                   <div className='text-box-ref'>
                     <div className='text-box-container'>
+                      <div
+                        style={{
+                          fontSize: '14px',
+                          height: '0px',
+                          color: 'white',
+                          marginLeft: '12px',
+                        }}>
+                        Incoming transmission:{' '}
+                      </div>
                       <div className='text-box'>
-                        <p></p>
+                        <div
+                          style={{
+                            width: '90%',
+                            marginLeft: '5px',
+                          }}>
+                          <br />
+                          <p>Planet mass: {planet.mass}</p>
+                          <p>Earth days to orbit Sun: {planet.velocity} days</p>
+                          <p>
+                            Earth years to orbit Sun: {planet.noEarthYears}{' '}
+                            year(s)
+                          </p>
+                          <p>Planet distance from Sun: {planet.kilometers}</p>
+                          <p>
+                            Planet distance from Sun: {planet.au}{' '}
+                            <span
+                              style={{ cursor: 'help' }}
+                              title="One AU - astronomical unit is the distance from the Sun to Earth's orbit, 150 million kilometers">
+                              AU
+                            </span>
+                          </p>
+                          <br />
+                          <p>{planet.description}</p>
+                        </div>
                       </div>
                     </div>
                   </div>

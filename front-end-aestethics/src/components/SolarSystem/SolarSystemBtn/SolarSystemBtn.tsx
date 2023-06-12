@@ -27,7 +27,7 @@ export const SolarSystemBtn = ({ options, onClick }: SolarSystemBtnProps) => {
       <button>
         <span className='spark'></span>
         <span className='backdrop'></span>
-        <div style={{ color: 'white', zIndex: 1 }}>{currentOptionLabel}</div>
+        <div style={{ zIndex: 1 }}>{currentOptionLabel}</div>
       </button>
     </div>
   );

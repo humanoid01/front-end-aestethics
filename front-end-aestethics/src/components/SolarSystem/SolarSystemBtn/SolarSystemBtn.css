@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 :root {
   --transition: 0.25s;
   --spark: 2s;
@@ -6,6 +8,9 @@
 }
 
 button {
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+  color: #ebb55f;
   --bg: radial-gradient(
         100% 100% at calc(220% - var(--active) * 100%)
           calc(220% - var(--active) * 100%),
