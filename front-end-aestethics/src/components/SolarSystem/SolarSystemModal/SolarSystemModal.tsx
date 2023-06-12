@@ -23,18 +23,27 @@ export const SolarSystemModal = ({
               <div className='text-box'>
                 <div className='planet-description'>
                   <br />
-                  <p>Planet mass: {planet.mass}</p>
-                  <p>Earth days to orbit Sun: {planet.velocity} days</p>
-                  <p>Earth years to orbit Sun: {planet.noEarthYears} year(s)</p>
-                  <p>Planet distance from Sun: {planet.kilometers}</p>
-                  <p>
-                    Planet distance from Sun: {planet.au}
-                    <span
-                      style={{ cursor: 'help' }}
-                      title="AU - astronomical unit is the distance from the Sun to Earth's orbit, 150 million kilometers">
-                      AU
-                    </span>
-                  </p>
+                  <div className='planet-info'>
+                    <p className='planet-mass'>Planet mass: {planet.mass}</p>
+                    <p className='planet-days'>
+                      Earth days to orbit Sun: {planet.velocity} days
+                    </p>
+                    <p className='planet-years'>
+                      Earth years to orbit Sun: {planet.noEarthYears} year(s)
+                    </p>
+                    <p className='planet-kilometers'>
+                      Planet distance from Sun: {planet.kilometers}
+                    </p>
+                    <p className='planet-au'>
+                      Planet distance from Sun: {planet.au}
+                      <span
+                        style={{ cursor: 'help' }}
+                        title="AU - astronomical unit is the distance from the Sun to Earth's orbit, 150 million kilometers">
+                        AU
+                      </span>
+                    </p>
+                  </div>
+
                   <br />
                   <p>{planet.description}</p>
                 </div>

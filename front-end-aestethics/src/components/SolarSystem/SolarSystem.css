@@ -248,3 +248,121 @@
   display: flex;
   justify-content: center;
 }
+/* Media queries */
+@media (max-width: 1200px) {
+  .solar-system-container {
+    left: 50%;
+    top: 63%;
+  }
+  .planet-names {
+    position: static;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    z-index: 999;
+    top: 5%;
+  }
+
+  .text-box {
+    clip-path: none;
+    background-color: transparent;
+    border: none;
+  }
+  .text-box-container {
+    width: 500px;
+    height: 300px;
+    clip-path: polygon(
+      50% 3%,
+      53% 0,
+      85% 0,
+      88% 3%,
+      97% 3%,
+      97% 50%,
+      99% 53%,
+      99% 80%,
+      85% 100%,
+      53% 100%,
+      50% 97%,
+      5% 97%,
+      2% 93%,
+      2% 85%,
+
+      2% 35%,
+      2% 30%,
+      10% 30%,
+      15% 25%,
+      25% 25%,
+      45% 3%
+    );
+  }
+
+  .text-box {
+    background: #0e374b;
+    width: 500px;
+    height: 300px;
+    clip-path: polygon(
+      50% 3%,
+      97% 3%,
+      97% 78.7%,
+      84% 97%,
+      5% 97%,
+      2% 95%,
+      2% 30%,
+      10% 30%,
+      20% 30%,
+      45% 3%
+    );
+  }
+
+  .transmission {
+    font-size: 14px;
+    height: 0px;
+    color: white;
+    margin-left: 290px;
+    line-height: 10px;
+  }
+
+  .planet-info {
+    margin-top: -5px;
+  }
+
+  .planet-description {
+    width: 90%;
+    margin-left: 20px;
+  }
+
+  .planet-mass {
+    margin-left: 210px;
+  }
+  .planet-days {
+    margin-left: 185px;
+  }
+  .planet-years {
+    margin-left: 160px;
+  }
+  .planet-kilometers {
+    margin-left: 135px;
+  }
+  .planet-au {
+    margin-left: 110px;
+  }
+
+  .dialog-wrapper {
+    top: 10%;
+    left: 105%;
+  }
+
+  .text-box-ref::after {
+    content: none;
+  }
+
+  .text-box-ref::before {
+    content: none;
+  }
+
+  .text-box-title-container {
+    left: -10%;
+    top: -5%;
+  }
+}
