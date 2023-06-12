@@ -18,7 +18,7 @@
   bottom: 0;
 }
 .planet {
-  z-index: 999;
+  z-index: 1;
 }
 
 #sun {
@@ -156,12 +156,15 @@
   width: 250px;
   height: 50px;
   background: #0e374b;
+  display: flex;
+  align-items: center;
 }
 
 .dialog-wrapper {
   position: absolute;
-  left: 80%;
+  left: -100%;
   top: 30%;
+  transform: translateX(-100%);
 }
 
 .text-box-ref::after {
@@ -184,4 +187,11 @@
   left: -4.1%;
   top: -10.6%;
   transform: rotate(90deg);
+}
+
+.planet-names {
+  position: absolute;
+  left: 90%;
+  top: 30%;
+  z-index: 2;
 }
