@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import sun from '../../../assets/SolarSystem/sun.png';
 import { Planet } from '../../../data/SolarSystem/planets';
 
@@ -13,6 +14,24 @@ export const SolarSystemContainer = ({
   planets,
 }: SolarSystemContainerProps) => {
   const currentOptionValue = options[option][1];
+  const [isSmDown, setIsSmDown] = useState(false);
+
+  const calculateOrbit = (planet: Planet) => {
+    return isSmDown ? planet.rad * 4 : planet.rad * 7;
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 700 && isSmDown !== true) {
+        setIsSmDown(true);
+      }
+      if (window.innerWidth > 700 && isSmDown !== false) {
+        setIsSmDown(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => removeEventListener('resize', handleResize);
+  }, [isSmDown]);
 
   return (
     <div className='solar-system-container'>
@@ -36,7 +55,7 @@ export const SolarSystemContainer = ({
               id={planet.name}
               // new orbit solution
               style={{
-                right: `${planet.rad * 7}px`,
+                right: `${calculateOrbit(planet)}px`,
                 animation: `unorbit linear ${
                   planet.velocity / currentOptionValue
                 }s infinite`,
@@ -51,8 +70,8 @@ export const SolarSystemContainer = ({
             key={planet.name}
             className='celestial orbits '
             style={{
-              height: `${planet.rad * 7}px`,
-              width: `${planet.rad * 7}px`,
+              height: `${calculateOrbit(planet)}px`,
+              width: `${calculateOrbit(planet)}px`,
             }}
           />
         );

@@ -45,7 +45,9 @@ export const SolarSystemModal = ({
                   </div>
 
                   <br />
-                  <p>{planet.description}</p>
+                  <div className='planet-long-description'>
+                    <p>{planet.description}</p>
+                  </div>
                 </div>
               </div>
             </div>
