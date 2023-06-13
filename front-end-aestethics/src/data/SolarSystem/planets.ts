@@ -1,11 +1,11 @@
-import mercury from '../../assets/SolarSystem/mercury.png';
-import venus from '../../assets/SolarSystem/venus.png';
-import earth from '../../assets/SolarSystem/earth.png';
-import mars from '../../assets/SolarSystem/mars.png';
-import jupiter from '../../assets/SolarSystem/jupiter.png';
-import saturn from '../../assets/SolarSystem/saturn.png';
-import uranus from '../../assets/SolarSystem/uranus.png';
-import neptune from '../../assets/SolarSystem/neptune.png';
+import mercury from '../../assets/SolarSystem/mercury.webp';
+import venus from '../../assets/SolarSystem/venus.webp';
+import earth from '../../assets/SolarSystem/earth.webp';
+import mars from '../../assets/SolarSystem/mars.webp';
+import jupiter from '../../assets/SolarSystem/jupiter.webp';
+import saturn from '../../assets/SolarSystem/saturn.webp';
+import uranus from '../../assets/SolarSystem/uranus.webp';
+import neptune from '../../assets/SolarSystem/neptune.webp';
 export interface Planet {
   img: string;
   name: string;

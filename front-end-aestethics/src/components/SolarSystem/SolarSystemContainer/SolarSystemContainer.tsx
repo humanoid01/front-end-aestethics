@@ -1,4 +1,4 @@
-import sun from '../../../assets/SolarSystem/sun.png';
+import sun from '../../../assets/SolarSystem/sun.webp';
 import { Planet } from '../../../data/SolarSystem/planets';
 
 interface SolarSystemContainerProps {

@@ -84,7 +84,7 @@
 .solar-system {
   height: 100vh;
   width: 100vw;
-  background: url('../../assets/SolarSystem/galaxy.jpg');
+  background: url('../../assets/SolarSystem/galaxy.webp');
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
