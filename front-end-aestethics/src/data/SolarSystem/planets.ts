@@ -118,6 +118,6 @@ export const planets: Planets = {
     au: '30.07',
     mass: '1.02 x 10^26',
     noEarthYears: '164.79',
-    description: `Neptune, the farthest planet from the Sun in our solar system, is another ice giant. Its deep blue coloration is a result of methane in its atmosphere, which absorbs red light and reflects blue light. Neptune boasts strong winds, with the fastest recorded in the solar system, reaching speeds over 2,100 kilometers per hour. The planet has a dynamic atmosphere with cloud systems, including the iconic Great Dark Spot, a storm similar to Jupiter's Great Red Spot but later disappeared. Neptune has a diverse moon system, with Triton being its largest moon and exhibiting fascinating geysers erupting from its icy surface. The study of Neptune provides valuable insights into the outer reaches of our solar system.`,
+    description: `Neptune, the farthest planet from the Sun in our solar system, is another ice giant. Its deep blue coloration is a result of methane in its atmosphere, which absorbs red light and reflects blue light. Neptune boasts strong winds, with the fastest recorded in the solar system, reaching speeds over 2,100 kilometers per hour. The planet has a dynamic atmosphere with cloud systems, including the iconic Great Dark Spot, a storm similar to Jupiter's Great Red Spot but later disappeared. Neptune has a diverse moon system, with Triton being its largest moon and exhibiting fascinating geysers erupting from its icy surface.`,
   },
 };

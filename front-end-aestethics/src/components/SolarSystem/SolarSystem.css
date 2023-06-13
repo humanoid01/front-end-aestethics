@@ -12,7 +12,7 @@
 
 .solar-system-container {
   position: absolute;
-  left: 30%;
+  left: 41%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 1000px;
@@ -375,7 +375,7 @@
   }
 
   .dialog-wrapper {
-    transform: translateX(-110%);
+    transform: translateX(-115%);
   }
 
   .text-box-container {
@@ -435,5 +435,83 @@
     font-size: 12px;
     line-height: 8px;
     margin-left: 240px;
+  }
+}
+
+@media (max-width: 500px) {
+  .solar-system-container {
+    width: 300px;
+    height: 300px;
+    top: 75%;
+  }
+  .planet-names {
+    gap: 4px;
+  }
+
+  .dialog-wrapper {
+    transform: translateX(-100%);
+  }
+
+  .text-box-container {
+    width: 300px;
+    height: 195px;
+  }
+
+  .text-box {
+    width: 300px;
+    height: 195px;
+  }
+  .planet-description {
+    width: 90%;
+    margin-left: 8px;
+  }
+
+  .planet-info {
+    margin-left: 10px;
+    width: 100%;
+  }
+
+  .planet-mass {
+    margin-left: 115px;
+  }
+  .planet-days {
+    margin-left: 99px;
+  }
+  .planet-years {
+    margin-left: 84px;
+  }
+  .planet-kilometers {
+    margin-left: 69px;
+  }
+  .planet-au {
+    margin-left: 55px;
+  }
+
+  .text-box-title-container {
+    left: 2%;
+    top: 1%;
+    width: 100px;
+    height: 20px;
+  }
+  .text-box-title {
+    width: 100px;
+    height: 20px;
+  }
+  .planet-title {
+    font-size: 22px;
+  }
+
+  .dialog-text {
+    font-size: 11px;
+  }
+
+  .planet-list-name {
+    font-size: 13px;
+  }
+
+  .transmission {
+    font-size: 10px;
+    line-height: 6px;
+    margin-left: 160px;
   }
 }

@@ -15,23 +15,37 @@ export const SolarSystemContainer = ({
 }: SolarSystemContainerProps) => {
   const currentOptionValue = options[option][1];
   const [isSmDown, setIsSmDown] = useState(false);
+  const [isXsDown, setIsXsDown] = useState(false);
+  const [isMdDown, setIsMdDown] = useState(false);
 
   const calculateOrbit = (planet: Planet) => {
-    return isSmDown ? planet.rad * 4 : planet.rad * 7;
-  };
+    if (isMdDown && !isSmDown && !isXsDown) return planet.rad * 7;
+    if (isSmDown && !isXsDown) return planet.rad * 4;
+    if (isXsDown) return planet.rad * 3;
 
+    return planet.rad * 10;
+  };
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 700 && isSmDown !== true) {
-        setIsSmDown(true);
+      if (window.innerWidth <= 500 && !isXsDown) return setIsXsDown(true);
+      if (
+        window.innerWidth > 500 &&
+        window.innerWidth <= 700 &&
+        window.innerWidth <= 1200 &&
+        isXsDown
+      )
+        return setIsXsDown(false);
+      if (window.innerWidth <= 700 && !isSmDown) {
+        return setIsSmDown(true);
       }
-      if (window.innerWidth > 700 && isSmDown !== false) {
-        setIsSmDown(false);
-      }
+      if (window.innerWidth > 700 && window.innerWidth < 1200 && isSmDown)
+        return setIsSmDown(false);
+      if (window.innerWidth <= 1200 && !isMdDown) return setIsMdDown(true);
+      if (window.innerWidth > 1200 && isMdDown) return setIsMdDown(false);
     };
     window.addEventListener('resize', handleResize);
     return () => removeEventListener('resize', handleResize);
-  }, [isSmDown]);
+  }, [isSmDown, isXsDown, isMdDown]);
 
   return (
     <div className='solar-system-container'>
