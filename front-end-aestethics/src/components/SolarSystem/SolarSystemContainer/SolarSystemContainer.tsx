@@ -79,7 +79,7 @@ export const SolarSystemContainer = ({
               id={planet.name}
               // new orbit solution
               style={{
-                right: `${calculateOrbit(planet)}px`,
+                right: `${planet.rad}vmin`,
                 animation: `unorbit linear ${
                   planet.velocity / currentOptionValue
                 }s infinite`,
@@ -94,8 +94,8 @@ export const SolarSystemContainer = ({
             key={planet.name}
             className='celestial orbits '
             style={{
-              height: `${calculateOrbit(planet)}px`,
-              width: `${calculateOrbit(planet)}px`,
+              height: `${planet.rad}vmin`,
+              width: `${planet.rad}vmin`,
             }}
           />
         );

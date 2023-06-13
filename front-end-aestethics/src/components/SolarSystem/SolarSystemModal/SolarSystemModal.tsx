@@ -14,7 +14,7 @@ export const SolarSystemModal = ({
         <div className='dialog-wrapper  dialog-text'>
           <div className='text-box-title-container'>
             <div className='text-box-title'>
-              <p className='planet-title'>{planet.name}</p>
+              <p>{planet.name}</p>
             </div>
           </div>
           <div className='text-box-ref'>

@@ -1,6 +1,6 @@
 import { Planet } from '../../../data/SolarSystem/planets';
 import { SolarSystemModal } from '../SolarSystemModal/SolarSystemModal';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 interface PlanetNameListProps {
   planets: [string, Planet][];
@@ -15,7 +15,7 @@ export const PlanetNameList = ({ planets }: PlanetNameListProps) => {
     <div className='planet-names'>
       {planets.map(([_, planet]) => {
         return (
-          <div key={planet.name}>
+          <Fragment key={planet.name}>
             <div
               className='dialog-text planet-list-name'
               onClick={() => {
@@ -29,7 +29,7 @@ export const PlanetNameList = ({ planets }: PlanetNameListProps) => {
               displayCurrentPlanet={displayCurrentPlanet}
               planet={planet}
             />
-          </div>
+          </Fragment>
         );
       })}
     </div>
