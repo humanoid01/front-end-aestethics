@@ -6,11 +6,7 @@
   --hue: 245;
   --active: 0;
 }
-.galaxy-button {
-  position: absolute;
-  top: 5%;
-  right: 15%;
-}
+
 button {
   font-family: 'VT323', monospace;
   font-size: 16px;
@@ -36,12 +32,11 @@ button {
   font-weight: 500;
   border: 0;
   cursor: pointer;
-  padding: 0.9em 1.3em;
+  padding: 1.5rem 3rem;
   display: flex;
   align-items: center;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   z-index: 999;
-  display: none;
   transition: var(--transition);
 }
 
@@ -69,7 +64,7 @@ button:is(:hover) {
   position: absolute;
   animation: flip 4s infinite steps(2, end);
   overflow: hidden;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
 }
 
 .spark::after {
@@ -92,6 +87,70 @@ button:is(:hover) {
   position: absolute;
   background: var(--bg);
   inset: 0.2rem;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   transition: var(--transition);
+}
+
+.galaxy-button {
+  position: absolute;
+  top: 5%;
+  right: 15%;
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+  button {
+    font-size: 24px;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+  }
+  .backdrop {
+    border-radius: 1rem;
+  }
+
+  .spark {
+    border-radius: 1rem;
+  }
+  .galaxy-button {
+    top: 85%;
+    right: 0%;
+  }
+}
+
+@media (max-height: 400px) {
+  .galaxy-button {
+    top: 88%;
+    right: 85%;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 16px;
+  }
+
+  .backdrop {
+    border-radius: 0.5rem;
+  }
+
+  .spark {
+    border-radius: 0.5rem;
+  }
+}
+@media (max-width: 400px) {
+  button {
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+  .backdrop {
+    border-radius: 0.5rem;
+  }
+
+  .spark {
+    border-radius: 0.5rem;
+  }
+  .galaxy-button {
+    top: 93%;
+    right: 0%;
+  }
 }
