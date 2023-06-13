@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react';
 import sun from '../../../assets/SolarSystem/sun.png';
 import { Planet } from '../../../data/SolarSystem/planets';
-import { useFirstRender } from '../../../useHooks/useFirstRender/useFirstRender';
 
 interface SolarSystemContainerProps {
   options: [string, number][];
@@ -15,48 +13,6 @@ export const SolarSystemContainer = ({
   planets,
 }: SolarSystemContainerProps) => {
   const currentOptionValue = options[option][1];
-  const [isSmDown, setIsSmDown] = useState(false);
-  const [isXsDown, setIsXsDown] = useState(false);
-  const [isMdDown, setIsMdDown] = useState(false);
-
-  const firstRender = useFirstRender();
-
-  const calculateOrbit = (planet: Planet) => {
-    if (isMdDown && !isSmDown && !isXsDown) return planet.rad * 7;
-    if (isSmDown && !isXsDown) return planet.rad * 4;
-    if (isXsDown) return planet.rad * 3;
-
-    return planet.rad * 10;
-  };
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerHeight <= 400) {
-        return setIsXsDown(true);
-      }
-      if (window.innerHeight <= 600) {
-        return setIsSmDown(true);
-      }
-
-      if (window.innerWidth <= 500 && !isXsDown) return setIsXsDown(true);
-      if (
-        window.innerWidth > 500 &&
-        window.innerWidth <= 700 &&
-        window.innerWidth <= 1200 &&
-        isXsDown
-      )
-        return setIsXsDown(false);
-      if (window.innerWidth <= 700 && !isSmDown) {
-        return setIsSmDown(true);
-      }
-      if (window.innerWidth > 700 && window.innerWidth < 1200 && isSmDown)
-        return setIsSmDown(false);
-      if (window.innerWidth <= 1200 && !isMdDown) return setIsMdDown(true);
-      if (window.innerWidth > 1200 && isMdDown) return setIsMdDown(false);
-    };
-    if (firstRender) handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => removeEventListener('resize', handleResize);
-  }, [isSmDown, isXsDown, isMdDown, firstRender]);
 
   return (
     <div className='solar-system-container'>
