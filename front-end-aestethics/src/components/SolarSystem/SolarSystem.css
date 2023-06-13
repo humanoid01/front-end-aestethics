@@ -408,6 +408,11 @@
     width: 330px;
   }
 
+  .transmission {
+    margin-left: 8px;
+    font-size: 9px;
+    line-height: 12px;
+  }
   .text-box-ref::after {
     content: '';
   }
