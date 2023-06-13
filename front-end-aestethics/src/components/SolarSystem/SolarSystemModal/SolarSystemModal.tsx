@@ -12,13 +12,13 @@ export const SolarSystemModal = ({
     <>
       {displayCurrentPlanet === planet.name ? (
         <div className='dialog-wrapper  dialog-text'>
-          <div className='text-box-title-container'>
-            <div className='text-box-title'>
+          <div className='text-box__title-container'>
+            <div className='text-box__title'>
               <p>{planet.name}</p>
             </div>
           </div>
           <div className='text-box-ref'>
-            <div className='text-box-container'>
+            <div className='text-box__container'>
               <div className='transmission'>Incoming transmission: </div>
               <div className='text-box'>
                 <div className='planet-description'>

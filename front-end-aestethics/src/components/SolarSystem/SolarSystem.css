@@ -91,7 +91,7 @@
   overflow: hidden;
 }
 
-.solar-system-container {
+.solar-system__container {
   position: absolute;
   left: 41%;
   top: 50%;
@@ -120,6 +120,31 @@
 
 .planet {
   z-index: 1;
+}
+
+.planet-names {
+  position: absolute;
+  right: 10%;
+  top: 25%;
+  z-index: 2;
+}
+.planet-title {
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+  width: 100%;
+  font-size: 40px;
+}
+.planet-description {
+  width: 90%;
+  margin-left: 5px;
+}
+
+.planet-list-name {
+  text-transform: capitalize;
+  margin-top: 20px;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 #sun {
@@ -188,7 +213,7 @@
   clip-path: var(--figure-long);
 }
 
-.text-box-container {
+.text-box__container {
   position: absolute;
   width: 330px;
   height: 500px;
@@ -200,7 +225,7 @@
   clip-path: var(--figure-long-parent);
 }
 
-.text-box-title-container {
+.text-box__title-container {
   position: absolute;
   left: 8%;
   top: -18%;
@@ -211,7 +236,7 @@
   opacity: 0.8;
 }
 
-.text-box-title {
+.text-box__title {
   clip-path: var(--figure-floating);
   font-size: 40px;
   position: absolute;
@@ -258,20 +283,6 @@
   transform: rotate(90deg);
 }
 
-.planet-names {
-  position: absolute;
-  right: 10%;
-  top: 25%;
-  z-index: 2;
-}
-.planet-title {
-  display: flex;
-  justify-content: center;
-  text-transform: capitalize;
-  width: 100%;
-  font-size: 40px;
-}
-
 .transmission {
   font-size: 14px;
   height: 0px;
@@ -279,23 +290,12 @@
   margin-left: 12px;
 }
 
-.planet-description {
-  width: 90%;
-  margin-left: 5px;
-}
-
-.planet-list-name {
-  text-transform: capitalize;
-  margin-top: 20px;
-  font-size: 30px;
-  cursor: pointer;
-}
 /* Media queries */
 @media (max-width: 1200px) {
   .solar-system {
     overflow: scroll;
   }
-  .solar-system-container {
+  .solar-system__container {
     left: 50%;
     top: 63%;
   }
@@ -313,7 +313,7 @@
     background-color: transparent;
     border: none;
   }
-  .text-box-container {
+  .text-box__container {
     width: 500px;
     height: 300px;
     clip-path: var(--figure-wide-parent);
@@ -372,14 +372,14 @@
     content: none;
   }
 
-  .text-box-title-container {
+  .text-box__title-container {
     left: -10%;
     top: -5%;
   }
 }
 
 @media (max-width: 1000px) {
-  .solar-system-container {
+  .solar-system__container {
     width: 1000px;
     height: 1000px;
     left: 50%;
@@ -388,7 +388,7 @@
 }
 
 @media (max-width: 800px) {
-  .solar-system-container {
+  .solar-system__container {
     width: 800px;
     height: 800px;
     top: 70%;
@@ -396,7 +396,7 @@
   .planet-list-name {
     font-size: 18px;
   }
-  .text-box-container {
+  .text-box__container {
     clip-path: var(--figure-long-parent);
     height: 500px;
     width: 330px;
@@ -420,7 +420,7 @@
     content: '';
   }
 
-  .text-box-title-container {
+  .text-box__title-container {
     left: 8%;
     top: -15%;
   }
@@ -456,7 +456,7 @@
     left: -8.1%;
     top: -14.3%;
   }
-  .text-box-container {
+  .text-box__container {
     height: 370px;
     width: 210px;
   }
@@ -466,14 +466,14 @@
     width: 210px;
   }
 
-  .text-box-title-container {
+  .text-box__title-container {
     width: 150px;
     height: 30px;
     left: 11%;
     top: -20%;
   }
 
-  .text-box-title {
+  .text-box__title {
     width: 150px;
     height: 30px;
     font-size: 16px;
@@ -512,32 +512,32 @@
 }
 
 @media (max-height: 1000px) {
-  .solar-system-container {
+  .solar-system__container {
     width: 1000px;
     height: 1000px;
   }
 }
 @media (max-height: 900px) {
-  .solar-system-container {
+  .solar-system__container {
     width: 900px;
     height: 900px;
   }
 }
 @media (max-height: 800px) {
-  .solar-system-container {
+  .solar-system__container {
     width: 800px;
     height: 800px;
   }
 }
 @media (max-height: 700px) {
-  .solar-system-container {
+  .solar-system__container {
     width: 700px;
     height: 700px;
   }
 }
 
 @media (max-height: 600px) {
-  .solar-system-container {
+  .solar-system__container {
     width: 600px;
     height: 600px;
   }
@@ -548,7 +548,7 @@
 }
 
 @media (max-height: 500px) {
-  .text-box-container {
+  .text-box__container {
     width: 400px;
     height: 235px;
     clip-path: var(--figure-wide-parent);
@@ -568,13 +568,13 @@
     height: 235px;
     clip-path: var(--figure-wide);
   }
-  .text-box-title-container {
+  .text-box__title-container {
     width: 150px;
     height: 40px;
     left: -1%;
     top: -1.5%;
   }
-  .text-box-title {
+  .text-box__title {
     width: 150px;
     height: 40px;
 
@@ -589,7 +589,7 @@
     line-height: 10px;
   }
 
-  .solar-system-container {
+  .solar-system__container {
     width: 450px;
     height: 450px;
     left: 25%;
@@ -619,7 +619,7 @@
 }
 
 @media (max-height: 400px) {
-  .solar-system-container {
+  .solar-system__container {
     width: 400px;
     height: 400px;
     left: 30%;
@@ -633,7 +633,7 @@
 }
 
 @media (max-height: 300px) {
-  .solar-system-container {
+  .solar-system__container {
     width: 300px;
     height: 300px;
     top: 60%;
