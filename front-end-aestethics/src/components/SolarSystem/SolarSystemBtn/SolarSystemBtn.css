@@ -41,6 +41,7 @@ button {
   align-items: center;
   border-radius: 2rem;
   z-index: 999;
+  display: none;
   transition: var(--transition);
 }
 

@@ -515,3 +515,29 @@
     margin-left: 160px;
   }
 }
+
+@media (max-height: 600px) {
+  .solar-system-container {
+    width: 400px;
+    height: 400px;
+    left: 30%;
+    top: 65%;
+  }
+  .dialog-wrapper {
+    top: 25%;
+    left: 110%;
+  }
+}
+
+@media (max-height: 400px) {
+  .solar-system-container {
+    width: 300px;
+    height: 300px;
+    left: 30%;
+    top: 70%;
+  }
+  .dialog-wrapper {
+    top: 18%;
+    left: 110%;
+  }
+}
