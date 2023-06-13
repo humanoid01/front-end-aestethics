@@ -24,9 +24,12 @@ export const SolarSystemBtn = ({ options, onClick }: SolarSystemBtnProps) => {
 
   return (
     <div className='galaxy-button' onClick={handleClick}>
+      {/* First layer */}
       <button>
-        <span className='spark'></span>
-        <span className='backdrop'></span>
+        {/* Spark */}
+        <span className='spark' />
+        {/* Second layer */}
+        <span className='backdrop' />
         <div style={{ zIndex: 1 }}>{currentOptionLabel}</div>
       </button>
     </div>

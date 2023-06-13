@@ -6,11 +6,12 @@
   --hue: 245;
   --active: 0;
 }
-
+/* First layer of colors */
 button {
   font-family: 'VT323', monospace;
   font-size: 16px;
   color: #ebb55f;
+  /* Creates two layers of colors */
   --bg: radial-gradient(
         100% 100% at calc(220% - var(--active) * 100%)
           calc(220% - var(--active) * 100%),
@@ -25,6 +26,7 @@ button {
   box-shadow: 0 0 calc(var(--active) * 6rem) calc(3rem * var(--active))
       hsl(var(--hue) 100% 30% / 0.5),
     0 0.1rem 0 0 gray inset;
+
   background: var(--bg);
   scale: calc(var(--active) * 0.1 + 1);
   position: relative;
@@ -43,7 +45,7 @@ button {
 button:is(:hover) {
   --active: 1;
 }
-
+/* Keyframes */
 @keyframes rotate {
   from {
     transform: rotate(-55deg);
@@ -59,6 +61,8 @@ button:is(:hover) {
   }
 }
 
+/* spark is outside, with it's content hidden while not in the button */
+
 .spark {
   inset: 0;
   position: absolute;
@@ -66,6 +70,8 @@ button:is(:hover) {
   overflow: hidden;
   border-radius: 1.5rem;
 }
+
+/* spark effect itself */
 
 .spark::after {
   content: '';
@@ -83,6 +89,8 @@ button:is(:hover) {
   z-index: -1;
 }
 
+/* second button layer */
+
 .backdrop {
   position: absolute;
   background: var(--bg);
@@ -90,6 +98,8 @@ button:is(:hover) {
   border-radius: 1.5rem;
   transition: var(--transition);
 }
+
+/* btn positioning */
 
 .galaxy-button {
   position: absolute;

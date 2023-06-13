@@ -22,7 +22,7 @@ export const SolarSystemContainer = ({
           <div
             key={planet.name}
             className='celestial rotate planet'
-            // new orbit solution
+            // new orbit solution, makes planets move on orbits their separate orbits
             style={{
               animation: `orbit linear ${
                 planet.velocity / currentOptionValue
@@ -33,7 +33,7 @@ export const SolarSystemContainer = ({
               src={planet.img}
               alt={planet.name}
               id={planet.name}
-              // new orbit solution
+              // new orbit solution, it "stops" spinning planets
               style={{
                 right: `${planet.rad}vmin`,
                 animation: `unorbit linear ${
@@ -44,6 +44,7 @@ export const SolarSystemContainer = ({
           </div>
         );
       })}
+      {/* Orbits */}
       {planets.map(([_, planet]) => {
         return (
           <div

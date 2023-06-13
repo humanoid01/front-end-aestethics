@@ -91,6 +91,14 @@
   overflow: hidden;
 }
 
+.dialog-text {
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+  color: #ebb55f;
+}
+
+/* solar system with orbits and celestials */
+
 .solar-system__container {
   position: absolute;
   left: 41%;
@@ -120,31 +128,6 @@
 
 .planet {
   z-index: 1;
-}
-
-.planet-names {
-  position: absolute;
-  right: 10%;
-  top: 25%;
-  z-index: 2;
-}
-.planet-title {
-  display: flex;
-  justify-content: center;
-  text-transform: capitalize;
-  width: 100%;
-  font-size: 40px;
-}
-.planet-description {
-  width: 90%;
-  margin-left: 5px;
-}
-
-.planet-list-name {
-  text-transform: capitalize;
-  margin-top: 20px;
-  font-size: 30px;
-  cursor: pointer;
 }
 
 #sun {
@@ -185,6 +168,8 @@
   width: 3vmin;
 }
 
+/* Keyframes */
+
 @keyframes orbit {
   from {
     transform: rotate(0deg);
@@ -202,6 +187,8 @@
     transform: rotate(0deg);
   }
 }
+
+/* modal  */
 
 .text-box {
   position: absolute;
@@ -255,12 +242,6 @@
   transform: translateX(-120%);
 }
 
-.dialog-text {
-  font-family: 'VT323', monospace;
-  font-size: 16px;
-  color: #ebb55f;
-}
-
 .text-box-ref::after {
   content: '';
   position: absolute;
@@ -283,6 +264,8 @@
   transform: rotate(90deg);
 }
 
+/* Modal content styles */
+
 .transmission {
   font-size: 14px;
   height: 0px;
@@ -290,7 +273,34 @@
   margin-left: 12px;
 }
 
+.planet-names {
+  position: absolute;
+  right: 10%;
+  top: 25%;
+  z-index: 2;
+}
+.planet-title {
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+  width: 100%;
+  font-size: 40px;
+}
+.planet-description {
+  width: 90%;
+  margin-left: 5px;
+}
+
+.planet-list-name {
+  text-transform: capitalize;
+  margin-top: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 /* Media queries */
+
+/* Media queries for width */
 @media (max-width: 1200px) {
   .solar-system {
     overflow: scroll;
@@ -508,8 +518,8 @@
     font-size: 14px;
   }
 }
-@media (max-width: 400px) {
-}
+
+/* Media queries for height */
 
 @media (max-height: 1000px) {
   .solar-system__container {

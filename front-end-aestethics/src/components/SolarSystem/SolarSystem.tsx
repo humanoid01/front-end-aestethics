@@ -4,17 +4,16 @@ import { SolarSystemBtn } from './SolarSystemBtn/SolarSystemBtn';
 import { useState } from 'react';
 import { PlanetNameList } from './PlanetNameList/PlanetNameList';
 import { SolarSystemContainer } from './SolarSystemContainer/SolarSystemContainer';
+const options: [string, number][] = [
+  ['1day/1s', 1],
+  ['180days/1s', 180],
+  ['1year/1s', 365],
+  ['2years/1s', 730],
+  ['5years/1s', 1825],
+];
 
 export const SolarSystem = () => {
-  const options: [string, number][] = [
-    ['1day/1s', 1],
-    ['180days/1s', 180],
-    ['1year/1s', 365],
-    ['2years/1s', 730],
-    ['5years/1s', 1825],
-  ];
   const [option, setOption] = useState(0);
-
   const plantesArray = Object.entries(planets);
 
   const handleOption = () => {
@@ -35,7 +34,7 @@ export const SolarSystem = () => {
         planets={plantesArray}
       />
       <PlanetNameList planets={plantesArray} />
-      <SolarSystemBtn options={options} onClick={() => handleOption()} />
+      <SolarSystemBtn options={options} onClick={handleOption} />
     </div>
   );
 };

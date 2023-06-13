@@ -12,6 +12,7 @@ export const PlanetNameList = ({ planets }: PlanetNameListProps) => {
   >(null);
 
   return (
+    // List of planet names
     <div className='planet-names'>
       {planets.map(([_, planet]) => {
         return (
@@ -25,6 +26,7 @@ export const PlanetNameList = ({ planets }: PlanetNameListProps) => {
               }}>
               {planet.name}
             </div>
+            {/* Modal */}
             <SolarSystemModal
               displayCurrentPlanet={displayCurrentPlanet}
               planet={planet}
