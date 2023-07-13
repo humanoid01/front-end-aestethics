@@ -13,7 +13,7 @@ export const PlanetNameList = ({ planets }: PlanetNameListProps) => {
 
   return (
     // List of planet names
-    <div className='planet-names'>
+    <div className='planet-names' data-testid='planet-names'>
       {planets.map(([_, planet]) => {
         return (
           <Fragment key={planet.name}>

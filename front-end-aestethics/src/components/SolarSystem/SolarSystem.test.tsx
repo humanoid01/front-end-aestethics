@@ -1,14 +1,18 @@
-import { render } from '@testing-library/react';
+import { RenderResult, render } from '@testing-library/react';
 import { SolarSystem } from './SolarSystem';
 
 describe('SolarSystem', () => {
-  it('Renders child components correctly', () => {
-    const { container } = render(<SolarSystem />);
+  let renderResult: RenderResult;
 
-    expect(
-      container.querySelector('.solar-system__container')
-    ).toBeInTheDocument();
-    expect(container.querySelector('.planet-names')).toBeInTheDocument();
-    expect(container.querySelector('.galaxy-button')).toBeInTheDocument();
+  beforeEach(() => {
+    renderResult = render(<SolarSystem />);
+  });
+
+  it('Renders child components correctly', () => {
+    const { getByTestId } = renderResult;
+
+    expect(getByTestId('solar-system__container')).toBeInTheDocument();
+    expect(getByTestId('planet-names')).toBeInTheDocument();
+    expect(getByTestId('galaxy-button')).toBeInTheDocument();
   });
 });

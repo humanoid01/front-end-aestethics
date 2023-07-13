@@ -15,7 +15,9 @@ export const SolarSystemContainer = ({
   const currentOptionValue = options[option][1];
 
   return (
-    <div className='solar-system__container'>
+    <div
+      className='solar-system__container'
+      data-testid='solar-system__container'>
       <img className='celestial' src={sun} alt='sun' id='sun' />
       {planets.map(([_, planet]) => {
         return (

@@ -23,7 +23,10 @@ export const SolarSystemBtn = ({ options, onClick }: SolarSystemBtnProps) => {
   const currentOptionLabel = options[option][0];
 
   return (
-    <div className='galaxy-button' onClick={handleClick}>
+    <div
+      className='galaxy-button'
+      data-testid='galaxy-button'
+      onClick={handleClick}>
       {/* First layer */}
       <button>
         {/* Spark */}
